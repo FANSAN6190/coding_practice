@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
 int main(){
+    system("");
     string food ="Pizza";
     string from ="Pasta";
     string *ptr=&food;
