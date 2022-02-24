@@ -5,24 +5,22 @@
 #include<iostream>
 using namespace std;
 int main(){
-    int N,m=0;
-    cout<<"Enter the Number of elements = ";
-    cin>>N;
-    char A[N-1];
-    cout<<"Enter the Values :"<<endl;
-    A[0]=0;
-    for(int i=1;i<N-1;i++){
+    int n,m=0;
+    cout<<"Enter the Size = ";
+    cin>>n;
+    int A[n-1];
+    for(int i=0;i<n-1;i++){
+        cout<<"Enter the Values = ";
         cin>>A[i];
-    }
-    for(int i=1;i<N-1;i++){
-        if(A[i]!=(A[i-1]+1)){
-            cout<<"_M_";
-            cout<<A[i];
-            m=A[i]+1;
-        }
-        else{
-            cout<<A[i];
+        if(((A[i])-A[i-1])!=1){
+            m=(A[i]-1);
         }
     }
-    cout<<endl<<m;
+    cout<<"Given Array is => ";
+    for(int i=0;i<n-1;i++){
+        cout<<A[i]<<" ";
+    }
+    
+    cout<<endl<<"Missing number is "<<m;
+    return 0;
 }
