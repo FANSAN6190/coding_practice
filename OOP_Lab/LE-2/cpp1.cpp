@@ -7,12 +7,23 @@ array of integers. */
 #include<iostream>
 using namespace std;
 int main(){
-    int n;
+    int n,max=0,min=INT32_MAX;
     cout<<"Enter the Number of Elements = ";
     cin>>n;
-    char arr[n];
+    int *arr;
     cout<<"Enter the values"<<endl;
     for(int i=0;i<n;i++){
-        cin>>arr[i];
+        cin>>*(arr+i);
     }
+    for(int i=0;i<n;i++){
+        cout<<*(arr+i)<<" ";
+        if(max<*(arr+i)){
+            max=*(arr+i);
+        }
+        else if(min>*(arr+i)){
+            min=*(arr+i);
+        }
+    }
+    cout<<endl<<"maximum value = "<<max;
+    cout<<endl<<"minimum value = "<<min;
 }

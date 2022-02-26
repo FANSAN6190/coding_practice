@@ -14,7 +14,7 @@ Output: 0 */
 
 #include<iostream>
 using namespace std;
-int strend(string s, string t);
+int strend(char s[100], char t[100]);
 int main(){
     char s[100],t[100];
     cout<<"Enter the String = ";
@@ -23,10 +23,8 @@ int main(){
     cin>>t;
     strend(s,t);
 }
-int strend(string s, string t){
-    for(int i=0;i<99;i++){
-        for(int j=0;j<99;j++){
-            if(t[i]==s[j])
-        }
+int strend(char s[100], char t[100]){
+    for(int i=0;i<100;i++){
+        if(t)
     }
 }
