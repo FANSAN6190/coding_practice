@@ -60,7 +60,7 @@ class stack{
     void display(){
         cout<<"these are the items in stack-"<<endl;
         for(int i=0;i<5;i++){
-            cout<<container[4-i]<<endl;
+            cout<<container[i]<<endl;
         }
     }  
 };
