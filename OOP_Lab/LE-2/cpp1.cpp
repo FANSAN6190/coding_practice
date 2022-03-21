@@ -6,24 +6,29 @@ Write a main function that uses this function to find and display the minimum an
 array of integers. */
 #include<iostream>
 using namespace std;
+int minmax(int ar[],int l, int *min,int *max);
 int main(){
-    int n,max=0,min=INT32_MAX;
+    int n,max=INT32_MIN,min=INT32_MAX;
     cout<<"Enter the Number of Elements = ";
     cin>>n;
-    int *arr;
+    int ar[n];
     cout<<"Enter the values"<<endl;
     for(int i=0;i<n;i++){
-        cin>>*(arr+i);
+        cin>>*(ar+i);
     }
-    for(int i=0;i<n;i++){
-        cout<<*(arr+i)<<" ";
-        if(max<*(arr+i)){
-            max=*(arr+i);
-        }
-        else if(min>*(arr+i)){
-            min=*(arr+i);
-        }
-    }
+    minmax(ar,n,&min,&max);
     cout<<endl<<"maximum value = "<<max;
     cout<<endl<<"minimum value = "<<min;
+}
+int minmax(int ar[],int l, int *min,int *max){
+    for(int i=0;i<l;i++){
+        if(ar[i]<*min){
+            *min=ar[i];
+        }
+        if(ar[i]>*max){
+            *max=ar[i];
+        }
+        cout<<"min= "<<*min<<" max= "<<*max<<endl;
+    }
+    return 0;
 }

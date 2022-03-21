@@ -15,6 +15,6 @@ int fact(int n){
         return 1;
     }
     else{
-        return (fact(n-1)*f);
+        return (fact(n-1)*f); 
     }
 }
