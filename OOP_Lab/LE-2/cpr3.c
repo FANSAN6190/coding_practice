@@ -1,4 +1,4 @@
-//Write a function to reverse an array of long double types. Call this function from main function.
+//3. Write a function to reverse an array of long double types. Call this function from main function.
 #include<stdio.h>
 int n;
 int rev(long double ar[]);

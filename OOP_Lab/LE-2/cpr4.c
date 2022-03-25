@@ -1,4 +1,4 @@
-//Write a program to perform the addition of two matrices.  
+//4. Write a program to perform the addition of two matrices.  
 #include<stdio.h>
 void main(){
     int A[3][3]={{1,2,3},{4,5,6},{7,8,9}};

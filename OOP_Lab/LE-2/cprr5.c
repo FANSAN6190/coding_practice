@@ -15,7 +15,10 @@ int frq(int n){
       int rm=n%10;
       n=n/10;
       rm==0?nf[0]++:(rm==1?nf[1]++:(rm==2?nf[2]++:(rm==3?nf[3]++:(rm==4?nf[4]++:(rm==5?nf[5]++:(rm==6?nf[6]++:(rm==7?nf[7]++:(rm==8?nf[8]++:(rm==9?nf[9]++:n9)))))))));
-   }
+}  
+   printf("0 1 2 3 4 5 6 7 8 9\n");
+   printf("%d %d %d %d %d %d %d %d %d %d\n",nf[0],nf[1],nf[2],nf[3],nf[4],nf[5],nf[6],nf[7],nf[8],nf[9]);
+   printf("\n");
 }
 int main(){
    int l,r,ele,max=0;
@@ -40,6 +43,6 @@ int main(){
          ele=i;
       }
    }
-   printf("%d",ele);
+   printf("%d %d",ele,max);
    return 0;
 }
