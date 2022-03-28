@@ -3,7 +3,7 @@
 #include<iostream>
 #include<string.h>
 using namespace std;
-void Strcat(char s[],char t[]);
+void strcat(char s[],char t[]);
 int main(){                                                                 
     char s[50],t[50];
     cout<<"Enter the String 1 = ";
@@ -11,10 +11,10 @@ int main(){
     cout<<"Enter the String 2 = ";
     cin>>t;
     //cout<<"Concatenated String = "<<
-    Strcat(s,t);
+    strcat(s,t);
     return 0;
 }
-void Strcat(char ns[],char t[]){
+void strcat(char ns[],char t[]){
     int i=0,k=0,l1,l2;
     l1=strlen(ns);
     l2=strlen(t);

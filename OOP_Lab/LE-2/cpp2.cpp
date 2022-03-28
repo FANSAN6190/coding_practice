@@ -8,17 +8,11 @@ Output:  34*/
 using namespace std;
 int main(){
     int d,m,n;
-    unsigned r;
-    srand((unsigned)time(NULL));
+    time_t t;
+    srand((unsigned)time(&t));
     cout<<"Enter the values of m and n = ";
-    cin>>m>>n;
-    for(int i=0;m<i && i<n;i++){
-        r=m+(rand()%(m+1));
-        cout<<r<<endl;
-    }
-    cout<<r;
-    
+    cin>>m>>n; 
+    for(int i=m;i<n;i++){
+        cout<<rand()%n<<endl;
+    }   
 }
-
-
-    

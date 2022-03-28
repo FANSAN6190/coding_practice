@@ -1,5 +1,5 @@
 //7. Write a function which takes a string as input from user and returns the length of that string without
-//   using any string library functions. Call this function from mail function.
+//   using any string library functions. Call this function from main function.
 #include<stdio.h>
 int len(char *c);
 void main(){

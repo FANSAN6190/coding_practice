@@ -3,6 +3,7 @@
 //number which is also satisfying the condition AABB ie.
 //first two digits (AA=77) are same and last two digits (BB=44) are same.
 #include<stdio.h>
+#include<math.h>
 int sqr(int x);
 void main(){
     int i,j,A,B;

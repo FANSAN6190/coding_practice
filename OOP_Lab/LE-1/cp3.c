@@ -1,10 +1,8 @@
-//3. Write a program to print “Hello JUET!” without main() function.
+//3. Write a program to print ï¿½Hello JUET!ï¿½ without main() function.
 #include<stdio.h>
-void phello(void);
-void main()
-{
-    phello();
-}
+#define phello main
 void phello(void){
-    printf("Hello JUET!");
+    printf("Hello JUET! %d",-__INT_MAX__);
 }
+
+

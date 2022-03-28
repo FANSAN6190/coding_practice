@@ -10,11 +10,10 @@
 #include<stdio.h>
 static int nf[10];
 int frq(int n){
-   static int n0=0,n1=0,n2=0,n3=0,n4=0,n5=0,n6=0,n7=0,n8=0,n9=0;
    for(int i=0;n>0;i++){
       int rm=n%10;
       n=n/10;
-      rm==0?nf[0]++:(rm==1?nf[1]++:(rm==2?nf[2]++:(rm==3?nf[3]++:(rm==4?nf[4]++:(rm==5?nf[5]++:(rm==6?nf[6]++:(rm==7?nf[7]++:(rm==8?nf[8]++:(rm==9?nf[9]++:n9)))))))));
+      rm==0?nf[0]++:(rm==1?nf[1]++:(rm==2?nf[2]++:(rm==3?nf[3]++:(rm==4?nf[4]++:(rm==5?nf[5]++:(rm==6?nf[6]++:(rm==7?nf[7]++:(rm==8?nf[8]++:(rm==9?nf[9]++:0)))))))));
    }
 }
 int main(){
