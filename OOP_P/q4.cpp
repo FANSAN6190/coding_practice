@@ -1,6 +1,4 @@
 #include<iostream>
-#include<random>
-#include<time.h>
 using namespace std;
 void flip(){
     int h,t;
