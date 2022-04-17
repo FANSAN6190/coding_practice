@@ -4,8 +4,14 @@ values of member variables. Write a program to test the class.*/
 #include<iostream>
 using namespace std;
 class rectangle{
-    public:
     int len,wid;
+	public:
+    void get_val(){
+    	cout<<"Enter the length of Rectangle = ";
+		cin>>len;
+    	cout<<"Enter the breadth of Rectangle = ";
+		cin>>wid;
+	}
     int area(){
         return len*wid;
     }
@@ -14,10 +20,7 @@ class rectangle{
     }
 }rc;
 int main(){
-    cout<<"Enter the length of Rectangle = ";
-    cin>>rc.len;
-    cout<<"Enter the length of Rectangle = ";
-    cin>>rc.wid;
+    rc.get_val();
     cout<<rc.area()<<endl;
     cout<<rc.perimeter()<<endl;
 }
