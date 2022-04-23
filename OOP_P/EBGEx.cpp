@@ -9,16 +9,16 @@ int main(){
         T=T-2;
         cin>>x;
         cin>>V;
-        P0=(V*2*3.14*0.2)/0.002;
+        P0=(V*2*3.141592*0.2)/0.002;
         P=P0/fws;
 
-        tem[i]=T;
+        tem[i]=T+273.15;
         volt[i]=V;
         rho[i]=P;
         rho0[i]=P0;
     }
     for(int i=0;i<50;i++){
-        cout<<i+1<<"    "<<tem[i]<<"     "<<tem[i]+273.15<<"    "<<volt[i]<<" "<<"        "<<rho[i]<<"        "<<((1/tem[i])*1000)<<"         "<<log(rho[i])<<endl;
+        cout<<i+1<<"    "<<tem[i]<<"     "<<tem[i]<<"    "<<volt[i]<<" "<<"        "<<rho[i]<<"        "<<((1/tem[i])*1000)<<"       "<<log(rho[i])<<"      "<<(log(rho[i])/((1/tem[i])*1000))<<"        "<<(log(rho[i])/((1/tem[i])*1000))*0.396<<endl;                                       
     }
     return 0;
 }

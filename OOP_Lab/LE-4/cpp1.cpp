@@ -56,14 +56,11 @@ int main(){
     int s1[10],s2[10],s3[10];
     for(int i=0;i<10;i++){
         if(std[i].sub1==max1){
-            s1[j]=std[i].r_no;
-            j++;
+            s1[i]=std[i].r_no;
+            i++;
         }
     }
     cout<<max1<<" "<<max2<<" "<<max3<<" "<<maxt<<endl;
     return 0;
     
 }
-
-mutable
-friend
