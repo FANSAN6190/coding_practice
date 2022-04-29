@@ -11,7 +11,7 @@ int main()
 {
 	string m;
 	int n;
-	cout<<"Enter the Movir name and duration in minutes = ";
+	cout<<"Enter the Movie name and duration in minutes = ";
 	cin>>m>>n;
 	fn1(m,n);
 	fn1(m);

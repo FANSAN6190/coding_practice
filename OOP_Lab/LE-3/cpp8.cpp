@@ -11,15 +11,13 @@ class nightclub{
         int tab_num;
         int ser_nam;
         int no_pat;
-        nightclub(){
-            min_chr=4.75;
-        }
-        static float minimum_charge(){
-            return 4.75;
+        static void minimum_charge(){
+            cout<<min_chr<<endl;
         }
 };
+float nightclub::min_chr=4.75;
 int main()
 {
-    cout<<nightclub::minimum_charge()<<endl;
+    nightclub::minimum_charge();
     return 0;
 }

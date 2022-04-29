@@ -13,22 +13,15 @@ class movie{
 		void setDirector(string);
 		void display();
 };
-void movie::setTitle(string s){
-	title=s;
-}
-void movie::setYear(int y){
-	year=y;
-}
-void movie::setDirector(string d){
-	drt_name=d;
-}
+void movie::setTitle(string s){title=s;}
+void movie::setYear(int y){year=y;}
+void movie::setDirector(string d){drt_name=d;}
 void movie::display(){
 	cout<<"Title = "<<title<<"\n";
 	cout<<"Director = "<<drt_name<<"\n";
 	cout<<"year = "<<year<<"\n";
 }
-int main()
-{
+int main(){
     movie myFavoriteMovie;
     myFavoriteMovie.setTitle("Hello");
 	myFavoriteMovie.setDirector("abcd efgh");
