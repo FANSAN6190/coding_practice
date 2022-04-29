@@ -1,4 +1,4 @@
-2/*3. Create a four-function calculator for fractions. Here are the formulas for the four arithmetic 
+/*3. Create a four-function calculator for fractions. Here are the formulas for the four arithmetic 
 operations applied to fractions: 
 Addition: a/b + c/d = (a*d + b*c) / (b*d) 
 Subtraction: a/b - c/d = (a*d - b*c) / (b*d) 
@@ -8,22 +8,38 @@ The user should type the first fraction (two values a and b), an operator, and a
 (two values c and d). The program should then display the results in fraction ie. (Numerator/ denominator).*/
 #include<iostream>
 using namespace std;
+class ffcalc{
+    public:
+    int a,b,c,d;
+    void addition(){
+        cout<<"Addition = "<<(a*d+b*c)<<"/"<<b*d<<endl;
+    }
+    void subtraction(){
+        cout<<"Subtraction = "<<(a*d-b*c)<<"/"<<b*d<<endl;
+    }
+    void multiplication(){
+        cout<<"Multiplication = "<<(a*c)<<"/"<<b*d<<endl;
+    }
+    void division(){
+        cout<<"Division = "<<(a*d)<<"/"<<b*c<<endl;
+    }
+};
 int main()
 {
-    int a,b,c,d;
-    char o;
+    ffcalc c1;
+    char o,q;
     cout<<"Enter the Values in Fraction-\n";
     cout<<"Enter the expresion = ";
-    cin>>a>>b>>o>>c>>d;
+    cin>>c1.a>>q>>c1.b>>o>>c1.c>>q>>c1.d;
     cout<<"Results in Fraction-\n";
     if(o=='+')
-        cout<<"Addition = "<<(a*d+b*c)<<"/"<<b*d<<endl;
+        c1.addition();
     else if(o=='-')
-        cout<<"Subtraction = "<<(a*d-b*c)<<"/"<<b*d<<endl;
+        c1.subtraction();
     else if(o=='x' || o=='*')
-        cout<<"Multiplication = "<<(a*c)<<"/"<<b*d<<endl;
+        c1.multiplication();
     else if(o=='/')
-        cout<<"Division = "<<(a*d)<<"/"<<b*c<<endl;
+        c1.division();
     else
         cout<<"Wrong Operator\n";
     return 0;

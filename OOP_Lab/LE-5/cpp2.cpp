@@ -1,69 +1,49 @@
-/*2. Define a class to represent a bank account, including the following data members:
-	Name of the depositor  
-	Account number  
-	Type of account 
-	Balance amount in the account  
-And member functions: 
-	To assign initial values  
-	To deposit an amount    
-	To withdraw an amount after checking the balance   
-	To display the name and balance 
-Write a main program to test the program.*/
+/*A point in a two-dimensional plane having coordinate as (x,y), can be represented by a class whose private 
+data members are x and y. Write the constructor and destructor functions of the class. The constructor should 
+initialise (x,y) by passing parameters values. Now, a rectangle can be represented by the top-left and 
+bottom-right vertices. Define a class say ‘Rectangle’ whose private data members are top-left and 
+bottom-right vertices. Write the parameterised constructor function of the class ‘Rectangle’. Also, 
+write the destructor function. Finally, write a program to show the order in which different constructors 
+and destructors are called.*/
 #include<iostream>
 using namespace std;
-class bk_acc{
-	public:
-		string depositor;
-		string accnum;
-		string acctype;
-		int balance;
-		bk_acc(){
-			depositor="Fansan";
-			accnum="2214 2478 9309";
-			acctype="Saving";
-			balance=0;
-		}
-		void deposit(int d){
-			balance=balance+d;
-		}
-		void withdrawl(int w){
-			if(balance-w>=0){
-				balance=balance-w;
-			}
-			else{
-				cout<<"Not Enough Amount\n";
-			}
-		}
-		void display(){
-			cout<<"Name: "<<depositor<<endl;
-			cout<<"Ac/N: "<<accnum<<endl;
-			cout<<"Account Type: "<<acctype<<endl;
-			cout<<"Balance: "<<balance<<endl;
-		}
-};
-int main(){
-	bk_acc c1;
-	c1.display();
-	int op,am;
-	cin>>op;
-	while(op!=0){
-		cin>>op;
-		switch(op){
-		case 1:
-			cin>>am;
-			c1.deposit(am);
-			break;
-		case 2:
-			cin>>am;
-			c1.withdrawl(am);
-			break;
-		case 3:
-			c1.display();
-			break;
-		}
-	}
-	return 0;
-}
+int c=0,d=0;
+class plane{
+    int x;
+    int y;
+    public:
+        plane():x(0),y(0){
+            cout<<"constructor(P) call:"<<++c<<" x="<<x<<" y="<<y<<endl;
+        }
+        plane(int a,int b):x(a),y(b){
+            cout<<"constructor(P) call:"<<++c<<" x="<<x<<" y="<<y<<endl;
+        } 
+        friend void display();
+        ~plane(){
+                cout<<"destructor(P) call:"<<++d<<" x="<<x<<" y="<<y<<endl;   
 
+        }
+        
+};
+class rectangle{
+    plane tl;
+    plane br;
+    public:
+    rectangle(plane &a,plane &b){
+        cout<<"constructor(R) call:"<<++c<<endl;
+        tl=a;
+        br=b;
+    }
+    friend void display();
+    ~rectangle(){
+        cout<<"destructor(R) call:"<<++d<<endl;   
+    } 
+};
+void display(){}
+
+int main(){
+    plane tl(1,2),br(3,6);
+    rectangle r1(tl,br);
+}
 
 

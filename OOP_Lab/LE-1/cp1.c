@@ -5,5 +5,5 @@ void main(){
     printf("Enter the Number = ");
     scanf("%lli",&n);
     for(i=0;n>0;i++,n/=10);
-    printf("%d",i);
+    printf("%lli",i);
 }
