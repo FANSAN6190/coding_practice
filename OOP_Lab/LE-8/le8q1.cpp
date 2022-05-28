@@ -6,8 +6,8 @@ function and redefine this function in the derived classes to suit their require
 the concept of dynamic binding. Remember the two values given as input will be treated as lengths of two sides in the case of rectangles and as base 
 and height in the case of triangles and used as follows:
 Area of rectangle = x * y
-Area of triangle = ½ * x * y
-(B). Extend the Program-1 to display the area of circle. This requires addition of a new derived class ‘circle’ that computes the area of a circle. 
+Area of triangle = ï¿½ * x * y
+(B). Extend the Program-1 to display the area of circle. This requires addition of a new derived class ï¿½circleï¿½ that computes the area of a circle. 
 Remember, for a circle we need only one value, its radius, but the get_data() function in the base class requires two values to be passed. (Hint: Make 
 the second argument of get_data() function as a default one with zero value.)
 (C). Run the above program with the following modifications:
@@ -22,8 +22,10 @@ class shape{
 		double x;
 		double y;
 	public:
-		void get_data(){
-			cin>>x>>y;
+		virtual void display_area()=0;
+		void get_data(double a, double b=0){
+			x=a;
+			y=b;
 		}	
 };
 class tringle : public shape{
@@ -34,16 +36,24 @@ class tringle : public shape{
 };
 class rectangle : public shape{
 	public:
+		virtual void display_area(){}	
+};
+class circle : public shape{
+	public:
 		virtual void display_area(){
-			cout<<"area="<<x*y<<endl;
-		}	
+			cout<<"area="<<(3.141592*x*x)<<endl;
+		}
 };
 int main(){
 	tringle tr1;
-	tr1.get_data();
+	tr1.get_data(3,5);
 	tr1.display_area();
 	rectangle rec1;
-	rec1.get_data();
+	rec1.get_data(3,5);
 	rec1.display_area();
+	circle c1;
+	c1.get_data(3);
+	c1.display_area();
+	return 0;
 }
 
