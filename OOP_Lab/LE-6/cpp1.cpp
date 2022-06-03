@@ -22,9 +22,10 @@ class dist{
 	}
 //Overloaded � operator to subtract 2 distances	
 	dist operator -(dist &ob){
-		this->feet=feet-ob.feet;
-		this->inch=inch-ob.inch;
-		return *this;
+		dist ob3;
+		ob3.feet=feet-ob.feet;
+		ob3.inch=inch-ob.inch;
+		return ob3;
 	}
 //Overloaded + operator to add 2 distances
 	dist operator +(dist &ob){
@@ -83,17 +84,12 @@ class dist{
 };
 int main(){
 	dist ob1(2,3),ob2(1,2),sub,add;
-	dist obj1(2,3),obj2(1,2);
 	sub=ob1-ob2;
 	sub.display();
 	add=ob1+ob2;
 	add.display();
-	obj1+=obj2;
-	obj1.display();
-	obj1-=obj2;
-	obj1.display();
-	cout<<(ob1==obj2)<<endl;
+	cout<<(ob1==ob2)<<endl;
 	cout<<(ob1>ob2)<<endl;
-	cout<<(obj1<obj2)<<endl;
+	cout<<(ob1<ob2)<<endl;
 }
 

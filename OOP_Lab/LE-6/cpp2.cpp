@@ -13,9 +13,7 @@ class rational{
 			int a,b;
 			cout<<"Enter the Rational Number = ";
 			cin>>a>>q>>b;
-			if(b==0){
-				cout<<"Math Error (Invalid Input)";
-			}
+			if(b==0){cout<<"Math Error (Invalid Input)";}
 			else{
 				n=a;
 				d=b;
@@ -53,8 +51,7 @@ class rational{
 		}
 		
 		void display(){
-			cout<<"Output\n";
-			cout<<n<<"/"<<d<<endl;
+			cout<<"Output\n"<<n<<"/"<<d<<endl;
 		}
 };
 int main(){

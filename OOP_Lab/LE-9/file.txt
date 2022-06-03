@@ -1,0 +1,5 @@
+Write a program to read the 
+file and store the lines 
+into an array. Also handle 
+the error by displaying 
+suitable error message.
