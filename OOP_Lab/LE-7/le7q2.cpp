@@ -41,7 +41,7 @@ class manager:public employee{
 			disqf();
 		}
 };
-class scientest:public employee{
+class scientist:public employee{
 	protected:
 		int no_publ;
 	public:
@@ -51,6 +51,7 @@ class scientest:public employee{
 			cin>>no_publ;
 			get();
 		}
+		////////////////////////////////////////////////////////////////////
 		void display(){
 			cout<<name<<" "<<emp_no<<" "<<no_publ<<" ";
 			disqf();
@@ -70,7 +71,7 @@ class labourer:public employee{
 };
 int main(){
 	manager mn1;
-	scientest s1;
+	scientist s1;
 	labourer l1;
 	mn1.set();
 	mn1.display();

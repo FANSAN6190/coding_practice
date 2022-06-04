@@ -9,25 +9,50 @@ class staff{
     protected:
         int code;
         string name;
+    public:
+        void inp(int c, string n){
+            code=c;
+            name=n;
+        }
+        void disp(){cout<<code<<" "<<name<<endl;}
 };
     class teacher : public staff{
         protected:
-            string subject;
-            string publication;
+            string subject,publication;
+        public:
+            void inp(string s,string p){
+                subject=s;
+                publication=p;
+            }
+            void disp(){cout<<subject<<" "<<publication<<endl;}
     };
     class typist : public staff{
         protected:
             int speed;
+        public:
+            void inp(int s){speed=s;}
+            void disp(){cout<<speed<<endl;}
     };
         class regular : public typist{
-            
         };
         class casual : public typist{
             protected:
                 float daily_wages;
+            public:
+                void inp(float d){daily_wages=d;}
         };
     class officer : public staff{
         protected:
             char grade;
+        public:
+            void inp(char g){grade=g;}
+            void disp(){cout<<grade<<endl;}
     };
-
+int main(){
+    teacher t1;
+    staff s1;
+    s1.inp(123,"laurence");
+    t1.inp("physics","magnetohydrodyanmics");
+    s1.disp();
+    t1.disp();
+}
