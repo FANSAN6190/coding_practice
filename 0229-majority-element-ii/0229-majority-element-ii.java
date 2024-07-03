@@ -5,10 +5,7 @@ class Solution {
         int e1=Integer.MIN_VALUE;
         int e2=Integer.MIN_VALUE;
         int n = nums.length;
-        if(n==1){
-            arr.add(nums[0]);
-            return arr;
-        }
+        
         for(int i=0;i<n;i++){
             if(c1==0 && e2!=nums[i]){
                 c1=1;
