@@ -20,14 +20,14 @@ class Solution {
                     k=j+1;
                     int l=n-1;
                     while(k<l){
-                        // long sum = ((long)nums[i]+nums[j]+nums[k]+nums[l]);
-                        if(((long)nums[i]+nums[j]+nums[k]+nums[l])<target){
+                        long sum = ((long)nums[i]+nums[j]+nums[k]+nums[l]);
+                        if(sum<target){
                             k++;
                         }
-                        else if(((long)nums[i]+nums[j]+nums[k]+nums[l])>target){
+                        else if(sum>target){
                             l--;
                         }
-                        else if(((long)nums[i]+nums[j]+nums[k]+nums[l])==target){
+                        else if(sum==target){
                             List<Integer> list = new ArrayList<>();
                             list.add(nums[i]);
                             list.add(nums[j]); 
