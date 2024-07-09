@@ -29,6 +29,9 @@ class Solution {
                         }
                         else if(sum>target){
                             l--;
+                            while(l>=k && l<n-2 && nums[l]==nums[l+1]){
+                                l--;
+                            }
                         }
                         else if(sum==target){
                             List<Integer> list = new ArrayList<>();
