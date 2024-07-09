@@ -23,15 +23,9 @@ class Solution {
                         // long sum = ((long)nums[i]+nums[j]+nums[k]+nums[l]);
                         if(((long)nums[i]+nums[j]+nums[k]+nums[l])<target){
                             k++;
-                            while(k<=l && nums[k]==nums[k-1]){
-                                k++;
-                            }
                         }
                         else if(((long)nums[i]+nums[j]+nums[k]+nums[l])>target){
                             l--;
-                            while(l>=k && l<n-2 && nums[l]==nums[l+1]){
-                                l--;
-                            }
                         }
                         else if(((long)nums[i]+nums[j]+nums[k]+nums[l])==target){
                             List<Integer> list = new ArrayList<>();
