@@ -8,23 +8,16 @@ class Solution {
         if(nums[mid]==target){
             return true;
         }
-        
-        if(nums[low]<nums[mid]){
+        if(nums[low]==nums[mid] && nums[mid]==nums[high]){
+            return BSVar(nums, low+1, high-1, target);
+        }
+        else if(nums[low]<=nums[mid]){
             if(nums[low]<=target && target<=nums[mid]){
                 return BSVar(nums, low, mid-1, target);
             }
             else{
                 return BSVar(nums, mid+1, high, target);
             }
-        }
-        else if(nums[low]==nums[mid] && nums[mid]==nums[high]){
-            return BSVar(nums, low+1, high-1, target);
-        }
-        else if(nums[low]==nums[mid]){
-            return BSVar(nums, mid+1, high, target);
-        }
-        else if(nums[mid]==nums[high]){
-            return BSVar(nums, low, mid, target);
         }
         else{
             if(mid==low){
