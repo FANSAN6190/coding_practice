@@ -1,6 +1,5 @@
 class Solution {
     int BSVar(int[] nums, int low, int high){
-        
         int mid =(low+high)/2;
         if(nums[low]<=nums[high]){
             return nums[low];
@@ -19,4 +18,3 @@ class Solution {
         return BSVar(nums, 0, nums.length-1);
     }
 }
-// [7,8,9,10,0,1,2]
