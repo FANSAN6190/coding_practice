@@ -16,16 +16,12 @@ class Solution {
             count++;
             temp=temp.next;
         }
-        int mid = (int)Math.ceil(count/2);
-        count=0;
-        temp = head;
-        while(temp!=null){
-            if(count>=mid){
-                return temp;
-            }
-            temp = temp.next;
-            count++;
+        temp=head;
+        count=count/2;
+        while(count>0){
+            count--;
+            temp=temp.next;
         }
-        return head;
+        return temp;
     }
 }
