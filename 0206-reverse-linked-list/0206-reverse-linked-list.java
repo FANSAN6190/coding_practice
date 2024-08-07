@@ -9,6 +9,15 @@
  * }
  */
 class Solution {
+    public ListNode reverse(ListNode temp0, ListNode temp1, ListNode temp2){
+        if(temp2==null){
+            temp1.next = temp0;
+            return temp1;
+        }
+        temp1.next = temp0;
+        return reverse(temp1,temp2,temp2.next);
+    }
+    
     public ListNode reverseList(ListNode head) {
         if(head==null){
             return null;
@@ -16,17 +25,6 @@ class Solution {
         else if(head.next==null){
             return head;
         }
-        ListNode temp0 = null;
-        ListNode temp1 = head;
-        ListNode temp2 = head.next;
-        
-        while(temp2!=null){
-            temp1.next=temp0;
-            temp0=temp1;
-            temp1=temp2;
-            temp2=temp2.next;
-        }
-        temp1.next=temp0;
-        return temp1;
+        return reverse(null,head,head.next);
     }
 }
