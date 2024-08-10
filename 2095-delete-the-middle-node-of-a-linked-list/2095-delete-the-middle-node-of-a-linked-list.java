@@ -14,15 +14,15 @@ class Solution {
             return null;
         }
         ListNode snail = head;
-        ListNode tort = head.next;
+        // ListNode tort = head.next;
         ListNode rabb = head.next.next;
         
         while(rabb!=null){
             if(rabb.next==null){
                 break;
             }
-            snail = tort;
-            tort = tort.next;
+            snail = snail.next;
+            // tort = tort.next;
             rabb = rabb.next.next;
         }
         snail.next = snail.next.next;
