@@ -21,10 +21,7 @@ class Solution {
             n++;
         }
         temp.next=pivot;
-        
         int l=n-k%n-1;
-        
-        System.out.println(l+" "+n+" "+k);
         while(l>0){
             head=head.next;
             l--;
