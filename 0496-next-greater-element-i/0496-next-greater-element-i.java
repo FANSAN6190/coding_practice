@@ -9,6 +9,7 @@ class Solution {
                 if(flag==true && nums1[i]<nums2[j]){
                     nums1[i]=nums2[j];
                     flag=false;
+                    break;
                 }
             }
             if(flag==true)
