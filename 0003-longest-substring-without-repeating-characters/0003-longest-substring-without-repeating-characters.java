@@ -13,9 +13,7 @@ class Solution {
             r=i;
             hash.put(ch,i);
             
-            if(maxCount<(r-l+1)){
-                maxCount=r-l+1;
-            }
+            maxCount = Math.max(maxCount, r-l+1);
             // System.out.println(l+" "+r+" "+maxCount);
         }
         return maxCount;
