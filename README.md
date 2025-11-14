@@ -1,2 +1,2 @@
 # cppprog
-This Repo is for learning and testing C++ programs.
+This Repo is for learning and testing programs.
